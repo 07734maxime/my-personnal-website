@@ -1,6 +1,6 @@
 <template>
   <main>
-    <RouterLink to="/">...</RouterLink>
+    
     <h1>My Projects</h1>
     <h2>From newest to oldest</h2>
     <section>
