@@ -33,11 +33,6 @@ const router = createRouter({
       name: "learning-japanese",
       component: () => import("../views/blog/LearningJapaneseView.vue"),
     },
-    {
-      path: "/blog/yume-nikki",
-      name: "yume-nikki",
-      component: () => import("../views/blog/YumeNikkiView.vue"),
-    }
   ],
 })
 

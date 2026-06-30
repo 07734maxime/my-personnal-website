@@ -5,3 +5,7 @@
 p {
     @apply text-justify
 }
+
+* {
+    @apply box-border
+}

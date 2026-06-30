@@ -26,20 +26,22 @@
             determinant calculation, so I'll update this as I progress.</p>
         <h3>Matrix</h3>
             <h4>Definition</h4>
-                <p>First of all, let's define the <Latex formula="A_{i,j}" :displayMode="false"></Latex> Matrix with <Latex
-                        formula="\{(i, j) \in \{1, \dots, n\}^2 \mid i = j\}" :displayMode="false"></Latex>. We admit that <Latex formula="i = j" :displayMode="false"></Latex> to simplify the notation :</p>
+                <p>First of all, let's define the <Latex :displayMode="false">A_{i,j}</Latex> Matrix with <Latex
+                    :displayMode="false">\{(i, j) \in \{1, \dots, n\}^2 \mid i = j\}</Latex>. We admit that <Latex :displayMode="false">i = j</Latex> to simplify the notation :</p>
                 <Latex
                     formula="A = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1j} \\ a_{21} & a_{22} & \cdots & a_{2j} \\ \vdots & \vdots & \ddots & \vdots \\ a_{i1} & a_{i2} & \cdots & a_{ij} \end{pmatrix}"
                     :displayMode="true" />
                 <p>Implementing a vector of a vector is not straightforward in Rust : so I'm using a flat vector <code>Vec&lt;f64&gt;</code> instead to represent it.</p>
-                <p>Thus, the matrix is represented as a flat vector of size <Latex formula="m" :displayMode="false"></Latex>, enough to store a square matrix in a single vector.</p>
-                <p>I needed then to establish a mapping between the 2D indices and the 1D index in the flat vector, so I converted the 2D indices to a 1D index using the formula <Latex formula="k = i \times n + i" :displayMode="false"></Latex>.</p>
+                <p>Thus, the matrix is represented as a flat vector of size <Latex :displayMode="false">m</Latex>, enough to store a square matrix in a single vector.</p>
+                <p>I needed then to establish a mapping between the 2D indices and the 1D index in the flat vector, so I converted the 2D indices to a 1D index using the formula <Latex :displayMode="false">k = i \times n + i</Latex>.</p>
                 
                 <p>Thus, I created the following <code>struct</code> :</p>
-                <CodeBlock code="struct Matrix {
-    data: Vec<f64>,
-    n: usize,
-}" language="rust" />
+                <CodeBlock language="rust">
+                    struct Matrix {
+                        data: Vec&#60;f64&#62;,
+                        n: usize
+                    }
+                </CodeBlock>
                 <p>Take acknowledge that all the functions are implemented inside of the <code>impl Matrix</code> block.</p>
         
             <h4>Elementary operations</h4>
@@ -52,9 +54,9 @@
                 <p>These operations are implemented as methods of the <code>Matrix</code> struct, and they are used to implement the Gaussian elimination algorithm.</p>
                 <ul>
                     <li>I've first of all created a function <code>get_row</code> to retrieve a specific row from the matrix. I will use this function to implement the elementary operations.</li>
-                    <li>The row swapping function (<Latex formula="L_1 \longleftrightarrow L_2" :displayMode="false"></Latex>) simply calls the <code>get_row</code> function to retrieve two rows and then swaps them.</li>
-                    <li>The row multiplication by a scalar function (<Latex formula="L_i \leftarrow \alpha \cdot L_i" :displayMode="false"></Latex>) calls the <code>get_row</code> function to retrieve a row and then multiplies each element by the scalar.</li>
-                    <li>The row addition function (<Latex formula="L_i \leftarrow L_i + \alpha L_j" :displayMode="false"></Latex>) calls the <code>get_row</code> function to retrieve two rows and then adds them together.</li>
+                    <li>The row swapping function (<Latex :displayMode="false">L_1 \longleftrightarrow L_2</Latex>) simply calls the <code>get_row</code> function to retrieve two rows and then swaps them.</li>
+                    <li>The row multiplication by a scalar function (<Latex :displayMode="false">L_i \leftarrow \alpha \cdot L_i</Latex>) calls the <code>get_row</code> function to retrieve a row and then multiplies each element by the scalar.</li>
+                    <li>The row addition function (<Latex :displayMode="false">L_i \leftarrow L_i + \alpha L_j</Latex>) calls the <code>get_row</code> function to retrieve two rows and then adds them together.</li>
                 </ul>
 
                 <p>Let's take an example to illustrate how these operations work. Consider the following matrix:</p>
@@ -73,12 +75,11 @@
                         :displayMode="true" />
                     <li>Add 3 times the first row to the third row:</li>
                     <Latex
-                        formula="A \sim \begin{pmatrix} 4 & 5 & 6 \\ 2 & 4 & 6 \\ 19 & 23 & 27 \end{pmatrix}"
-                        :displayMode="true" />
+                        :displayMode="true">A \sim \begin{pmatrix} 4 & 5 & 6 \\ 2 & 4 & 6 \\ 19 & 23 & 27 \end{pmatrix}</Latex>
                 </ul>
                 <p>These operations are the building blocks for the Gaussian elimination algorithm, which I will implement soon.</p>
             <article class="bg-neutral-200 p-3 border-red-500 border">
-                <h3>To Do</h3>
+                <h3 class="m-0">To Do</h3>
                 <ul>
                     <li>Implement the Gaussian elimination algorithm</li>
                     <li>Implement determinant calculation
