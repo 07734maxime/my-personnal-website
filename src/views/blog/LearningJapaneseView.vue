@@ -15,7 +15,7 @@
                 with Japanese people, read books, watch movies and anime without subtitles.
             </p>
             <p>I'm too lazy to make another section for that, so I'll explain here how Japanese is actually structured.
-                Basically, Japanese uses 3 differents writing systems, which are Hiragana (<span class="font-bold">ひらがな</span>), Katakana (<span class="font-bold">カタカナ</span>) and Kanji (<span class="font-bold">漢字</span>). Hiragana and Katakana are phonetic alphabets,
+                Basically, Japanese uses 3 differents writing systems, which are <span class="italic">Hiragana</span> (<span class="font-bold">ひらがな</span>), <span class="italic">Katakana</span> (<span class="font-bold">カタカナ</span>) and <span class="italic">Kanji</span> (<span class="font-bold">漢字</span>). Hiragana and Katakana are phonetic alphabets,
                 while Kanji are ideograms (they represent meanings rather than sounds). <span class="underline">If you're confused about Kanji, just accept it, and you'll understand it later, trust me.</span>
             </p>
             <p>
@@ -68,6 +68,35 @@
                 You can use consonants like k, s, t, n, h, m, y, r, and w to form syllables like ka (<span class="font-bold">か</span>), shi (<span class="font-bold">し</span>), tsu (<span class="font-bold">つ</span>), ne (<span class="font-bold">ね</span>), ho (<span class="font-bold">ほ</span>)...
             </p>
             <p class="p-2 border text-red-500 text-xl font-semibold">I've created a page so you can explore the full Japanese alphabet. If you want to learn more, <RouterLink class="text-xl" to="/stuff/japanese-alphabet">click here</RouterLink></p>
+        <h2>How is learning Japanese?</h2>
+            <p>In <a href="https://www.youtube.com/watch?v=tkFOBx6j0l8" target="_blank" class="hover:underline italic no-underline text-black">two words</a>: really hard.</p>
+            <p>Unironically, what makes Japanese hard is not even the writing system. It's very easy to learn, and pronunciation is really straightforward, even a 2-year-old can learn it.
+                Japanese grammar is also not that complicated, it's basically a SOV system : subject-object-verb. It can be complex the first time when you always used a SVO system as I,
+                but it's not that tough to get used to it. What makes Japanse really, really difficult is vocabulary.
+            </p>
+            <p>
+                As a latin-language speaker, all the words you know are based on Latin roots,
+                and you can easily deduce the meaning of a word you don't know by looking at its root.
+                    In Japanese, there is no such thing, and you have to learn every single word by heart. This is really frustrating because this makes you stuck at the simple sentences,
+                    and you can't really express yourself in a complex way.
+            </p>
+            <hr class="my-6" />
+            <p>When you learn Japanese, there is something called <a href="https://www.jlpt.jp/" target="_blank">Japanese-Language Proficiency Test</a>, also called <span class="italic"> JLPT </span>.
+            It's basically a test to measure your Japanese language skills, as a foreigner. This test is divided into several levels, starting from N5 (beginner) to N1 (advanced).
+            <span class="text-red-600">Currently, I'm preparing for the JLPT N5.</span> I'd say before my break, it was going well, but this is the first time
+            that I'm really slow to learn something.</p>
+        <h2>Let's talk about Kanji.</h2>
+            <p>As said previously, Kanji are used to represent ideas and concepts, rather than sounds.
+                This means that each Kanji character has a specific meaning, and you have to learn both the reading and the meaning of each character.
+                Also, there is two readings for each Kanji character, the <span class="italic">On'yomi</span> (<span class="font-bold">音読み</span>) and the <span class="italic">Kun'yomi</span> (<span class="font-bold"> 訓読み</span>).
+                On'yomi is the reading of the Kanji character when it is used in a compound word, while Kun'yomi is the reading of the Kanji character when it is used alone.
+                If you don't understand how can Kanji be useful, I'll show you a pretty simple example:
+                <ul>
+                    <li><span class="font-bold">知らない</span> (<span class="italic">shiranai</span>) literally means "I don't know". Here, the <span class="font-bold">知</span> Kanji represents the concept of "knowing", so context can be deduced easily with this one. </li>
+                    <li><span class="font-bold">死</span> (<span class="italic">shi</span>) literally means "death". Here, the <span class="font-bold">死</span> Kanji represents the concept of "death", so context can be deduced easily with this one. </li>
+                </ul>
+                <p>As you may have noticed, Japanese have a lot of common sounds for different words, different meanings, so Kanji are there to represent the different meaning through an image, an idea to exactly deduce the context of the conversation.</p>
+            </p>
     </main>
 </template>
 
