@@ -5,34 +5,54 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/projects',
-      name: 'projects',
+      name: 'Projects',
       component: () => import('../views/ProjectsView.vue'),
     },
     {
       path: '/hobbies',
-      name: 'hobbies',
+      name: 'Hobbies',
       component: () => import('../views/HobbiesView.vue'),
     },
     {
       path: '/blog',
-      name: 'blog',
+      name: 'Blog',
       component: () => import('../views/BlogView.vue'),
     },
     {
       path: "/blog/rust-impressions",
-      name: "rust-impressions",
+      name: "First impressions about Rust",
       component: () => import("../views/blog/RustImpressionsView.vue"),
     },
     {
       path: "/blog/learning-japanese",
-      name: "learning-japanese",
+      name: "My experience learning Japanese",
       component: () => import("../views/blog/LearningJapaneseView.vue"),
     },
+    {
+      path: "/blog/math-analysis",
+      name: "Mathematical analysis",
+      component: () => import("../views/blog/AnalysisView.vue"),
+    },
+    {
+      name: "Not Found",
+      path: "/:catchAll(.*)",
+      redirect: "/",
+    },
+    {
+      name: "Japanese Alphabet",
+      path: "/stuff/japanese-alphabet",
+      component: () => import("../views/stuff/JapaneseAlphabetView.vue"),
+    },
+    {
+      name: "Stuff",
+      path: "/stuff",
+      component: () => import("../views/StuffView.vue"),
+    }
   ],
 })
 

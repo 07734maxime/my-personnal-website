@@ -1,6 +1,14 @@
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const blogRoutes = ref(router.getRoutes().filter(route => route.path.startsWith("/blog/")));
+
+</script>
+
 <template>
   <main class="blog-view">
-    <section class="hero">
+    <section>
       <h1>My personal blog</h1>
       <p>Basically, this is same as hobby page but with more developed content, more explanations and more depth. I may
         eventually expand it to include things that
@@ -13,18 +21,10 @@
     <section>
       <h2>Navigation</h2>
       <ul class="flex flex-col gap-2 list-none p-0">
-        <RouterLink to="/blog/rust-impressions">
+        <RouterLink v-for="route in blogRoutes" :key="route.path" :to="route.path">
           <li class="bg-neutral-200 p-3 hover:border-red-500 border hover:bg-gray-300">
-
-            My first impressions about Rust
-            <p class="m-0 text-red italic">Warning: Algebra jumpscare</p>
+            {{ route.name }}
           </li>
-        </RouterLink>
-        <RouterLink to="/blog/learning-japanese">
-          <li class="bg-neutral-200 p-3 hover:border-red-500 border hover:bg-gray-300">Learning japanese</li>
-        </RouterLink>
-        <RouterLink to="/blog/yume-nikki">
-          <li class="bg-neutral-200 p-3 hover:border-red-500 border hover:bg-gray-300">yumenikki.txt</li>
         </RouterLink>
       </ul>
     </section>
