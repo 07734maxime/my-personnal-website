@@ -34,11 +34,6 @@ const router = createRouter({
       component: () => import("../views/blog/LearningJapaneseView.vue"),
     },
     {
-      path: "/blog/math-analysis",
-      name: "Mathematical analysis",
-      component: () => import("../views/blog/AnalysisView.vue"),
-    },
-    {
       name: "Not Found",
       path: "/:catchAll(.*)",
       redirect: "/",

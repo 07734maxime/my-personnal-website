@@ -85,7 +85,7 @@
             It's basically a test to measure your Japanese language skills, as a foreigner. This test is divided into several levels, starting from N5 (beginner) to N1 (advanced).
             <span class="text-red-600">Currently, I'm preparing for the JLPT N5.</span> I'd say before my break, it was going well, but this is the first time
             that I'm really slow to learn something.</p>
-        <h2>Let's talk about Kanji.</h2>
+        <h2>Let's talk about Kanji</h2>
             <p>As said previously, Kanji are used to represent ideas and concepts, rather than sounds.
                 This means that each Kanji character has a specific meaning, and you have to learn both the reading and the meaning of each character.
                 Also, there is two readings for each Kanji character, the <span class="italic">On'yomi</span> (<span class="font-bold">音読み</span>) and the <span class="italic">Kun'yomi</span> (<span class="font-bold"> 訓読み</span>).
@@ -97,6 +97,14 @@
                 </ul>
                 <p>As you may have noticed, Japanese have a lot of common sounds for different words, different meanings, so Kanji are there to represent the different meaning through an image, an idea to exactly deduce the context of the conversation.</p>
             </p>
+        <h2>Japanese Grammar</h2>
+        <p>I'll be short on that one : Japanese grammar is actually not that hard once you get the hang of it. As said earlier,
+            it's all bout understanding the SOV system, and how to "conjugate" verbs (because this is reammy easy). I think the best thing to do is to train
+            regularly, and try to understand the logic behind all that instead of learning by heart.
+        </p>
+        <hr class="my-6" />
+        <h2>What I've Learned</h2>
+        <p>To be continued...</p>
     </main>
 </template>
 

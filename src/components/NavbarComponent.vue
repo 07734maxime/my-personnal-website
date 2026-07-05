@@ -11,7 +11,7 @@
       ↑
     </a>
 
-    <p class="border-t bg-neutral-200 h-full min-w-fit border-l px-4 flex items-center" :class="isSidebarToggled ? 'pointer-events-none' : ''">
+    <p class="border-t bg-neutral-200 h-full min-w-fit border-l px-4 flex items-center lg:justify-end lg:border-r lg:w-5/6 lg:mx-auto " :class="isSidebarToggled ? 'pointer-events-none' : ''">
       <a v-for="(part, index) in ['/home', ...route.path.split('/').filter(Boolean)]" :key="part">
         <RouterLink active="underline" class="no-underline hover:underline" active-class="font-semibold underline text-red-500"
           :to="index === 0 ? '/' : `/${route.path.split('/').filter(Boolean).slice(0, index).join('/')}`">{{ part }}/
