@@ -1,19 +1,11 @@
 <script setup>
 import ProjectComponent from '@/components/ProjectComponent.vue';
-
-const scrollXWithWheel = (event) => {
-  const element = event.currentTarget;
-  const delta = Math.abs(event.deltaY) > Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
-  element.scrollBy({ left: delta * 0.75, top: 0, behavior: 'smooth' });
-};
-
 </script>
 
 <template>
   <main>
 
     <h1>My Projects</h1>
-    <section class="flex gap-4 flex-nowrap overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4" @wheel.prevent="scrollXWithWheel">
       <ProjectComponent class="shrink-0 snap-start w-full" :project="{
         name: 'Initialization to Rust',
       }">
@@ -52,10 +44,9 @@ const scrollXWithWheel = (event) => {
           Sadly, time made me abandon this project, and I never completed it.
         </p>
       </ProjectComponent>
-    </section>
+
     <h2>School Projects</h2>
     <p>I put these one here because they are related to my academic work, and ideas behind them were not by me.</p>
-    <section class="flex flex-nowrap gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4" @wheel.prevent="scrollXWithWheel">
       <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'S101' }">
         <p>
           Creation of a "Pac-Man" type game using C++.
@@ -76,6 +67,5 @@ const scrollXWithWheel = (event) => {
           Not really fun to make but was useful to learn about how C++ works and how to implement algorithms in it.
         </p>
       </ProjectComponent>
-    </section>
   </main>
 </template>

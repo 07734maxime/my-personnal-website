@@ -3,7 +3,7 @@
         <h1>{{ route.name }}</h1>
         <p>You can click on a character to hear its pronunciation.</p>
         <div class="grid grid-cols-5 gap-5 text-xl">
-            <span v-for="(char, index) in alphabet" :key="index" :class="char.romaji == '-' ? '' : 'hover:text-red-500'"
+            <span v-for="(char, index) in alphabet" :key="index" :class="char.romaji == '-' ? '' : 'active:text-red-500 hover:text-red-500'"
                 class="cursor-pointer p-4 text-center" @click="playKana(char.romaji)">
                 <span class="block font-bold text-2xl">{{ char.hiragana }}</span>
                 <span class="block font-bold text-2xl">{{ char.katakana }}</span>
