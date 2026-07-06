@@ -5,7 +5,7 @@ p {
     @apply text-justify
 }
 
-* {
+*{
     @apply box-border
 }
 
@@ -13,6 +13,7 @@ p {
     --font-display: "Syne", sans-serif;
     --font-mono: "Kode Mono", monospace;
     --font-sans: "Inter", sans-serif;
+    --rust-color: #CE422B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,4 +35,20 @@ body {
 
 .tech-icon  {
     @apply h-12 w-12 rounded-xs flex items-center justify-center hover:bg-orange-200
+}
+
+.solid-shadow-3 {
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.65);
+}
+
+.solid-shadow-5 {
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.65);
+}
+
+.bg-rust {
+    background-color: var(--rust-color);
+}
+
+.highlight-title {
+    @apply bg-orange-300 w-fit p-1
 }

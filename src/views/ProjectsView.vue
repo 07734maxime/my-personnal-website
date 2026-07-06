@@ -1,71 +1,105 @@
 <script setup>
+import AboutBox from '@/components/boxes/AboutBox.vue';
 import ProjectComponent from '@/components/ProjectComponent.vue';
 </script>
 
 <template>
-  <main>
+  <main class="min-w-full flex flex-col gap-3">
 
-    <h1>My Projects</h1>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{
-        name: 'Initialization to Rust',
-      }">
-        <p>
-          My first project in Rust! I had no experience with the language before starting this project, thus I tried to
-          implement algebraic operations on matrices.
-          My goal here is to implement a lot of linear algebra tools.
-          You can get more information at <RouterLink to="/blog/rust-impressions">this page</RouterLink>.
-        </p>
-      </ProjectComponent>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'This website' }">
-        <p>
-          This is the website you are currently viewing, and I made it with Vue.js.
-          I wanted to make a website to showcase my projects and to talk about my hobbies.
-          This website was initially different, and only oriented about showcasing my projects, but I wanted to make it
-          more personal, and thus I added pages about my hobbies.
-        </p>
-      </ProjectComponent>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'Yepi' }">
-        <p>
-          This project is abandoned.
-          The goal there was to make an API to regroup unreleased songs from artists, and to make a website to showcase
-          them.
-          I wanted to make it because I was tired of downloading unreleased songs from artists on the internet, and I
-          wanted to make a website to showcase them.
-          I gave up on this project because I was doubting about the legality of it, and the ratio of work to the result
-          was too high for me to continue it.
-        </p>
-      </ProjectComponent>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'Unnamed Project' }">
-        <p>
-          This is an unnamed project that I started but never completed.
-          The idea was to create a simple web application using Electron to manage colors.
-          I wanted to make an app with a fast color picker, extracting colors from images, and a color palette
-          generator.
-          Sadly, time made me abandon this project, and I never completed it.
-        </p>
+    <h1 class="highlight-title rotate-2 text-3xl">Projects</h1>
+
+    <AboutBox>
+      Here are some of my personal projects and school projects. I will try to add more as I go along.
+    </AboutBox>
+
+    <section class="py-2 flex flex-col gap-4">
+
+      <h2 class="highlight-title rotate-1 text-2xl">Personal Projects</h2>
+
+      <article class="grid grid-cols-2 grid-rows-1 gap-4 ">
+
+        <ProjectComponent t :project="{
+          name: 'Initialization to Rust',
+          tags: [
+            { name: 'Rust', color: 'bg-rust' }
+          ]
+        }">
+          <p class="min-h-32 text-sm mx-2">My first project in Rust! I tried to implement linear algebra operations.</p>
+          <div class="flex justify-center">
+            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+              Info</button>
+          </div>
+        </ProjectComponent>
+
+        <ProjectComponent
+          :project="{ name: 'This website', tags: [{ name: 'Vue', color: 'bg-green-500' }, { name: 'Tailwind', color: 'bg-sky-400' }] }">
+          <p class="min-h-32 text-sm mx-2">This website you are currently in.</p>
+          <div class="flex justify-center">
+            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+              Info</button>
+          </div>
+
+        </ProjectComponent>
+
+        <ProjectComponent
+          :project="{ name: 'Yepi', tags: [{ name: 'Node.js', color: 'bg-green-500' }, { name: 'Express', color: 'bg-yellow-500' }] }">
+
+          <p class="min-h-32 text-sm mx-2">Abandonned app to listen to music. </p>
+          <div class="flex justify-center">
+            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+              Info</button>
+          </div>
+        </ProjectComponent>
+
+        <ProjectComponent :project="{ name: 'Unnamed', tags: [{ name: 'Electron', color: 'bg-blue-500' }] }">
+          <p class="min-h-32 text-sm mx-2">Abandonned app to create a color palette.</p>
+          <div class="flex justify-center">
+            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+              Info</button>
+          </div>
+        </ProjectComponent>
+
+      </article>
+    </section>
+
+    <h2 class="highlight-title -rotate-2 text-2xl">School Projects</h2>
+
+    <AboutBox>
+      I put these one here because they are related to my academic work, and ideas behind them were not
+      by me.
+    </AboutBox>
+
+    <article class="grid grid-cols-2 grid-rows-1 gap-4">
+
+      <ProjectComponent
+        :project="{ name: 'S101', tags: [{ name: 'C++', color: 'bg-blue-600' }, { name: 'Doxygen', color: 'bg-neutral-500' }] }">
+
+        <p class="min-h-32 text-sm mx-2">Creation of a "Pac-Man" type game in the shell.</p>
+        <div class="flex justify-center">
+          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+            Info</button>
+        </div>
       </ProjectComponent>
 
-    <h2>School Projects</h2>
-    <p>I put these one here because they are related to my academic work, and ideas behind them were not by me.</p>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'S101' }">
-        <p>
-          Creation of a "Pac-Man" type game using C++.
-          This one was is my favorite : even though it was hard to make, I learned a lot about C++ and how to use it to
-          create a simple shell game.
-        </p>
+      <ProjectComponent
+        :project="{ name: 'R102', tags: [{ name: 'HTML', color: 'bg-red-500' }, { name: 'CSS', color: 'bg-blue-400' }] }">
+
+        <p class="min-h-32 text-sm mx-2">A website to showcase albums and songs from a music band.</p>
+        <div class="flex justify-center">
+          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+            Info</button>
+        </div>
       </ProjectComponent>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'R102' }">
-        <p>
-          A simple HTML/CSS website to showcase albums and songs from music band. Had no better idea for this project,
-          but it was cool to create.
-        </p>
+
+      <ProjectComponent :project="{ name: 'S102', tags: [{ name: 'C++', color: 'bg-blue-600' }] }">
+        <p class="min-h-32 text-sm mx-2">Implementing voting systems: Borda count, two-round system, and one-round
+          system.</p>
+        <div class="flex justify-center">
+          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+            Info</button>
+        </div>
       </ProjectComponent>
-      <ProjectComponent class="shrink-0 snap-start w-full" :project="{ name: 'S102' }">
-        <p>
-          This project was about implementing voting systems using C++. I implemented the Borda count, the two-round
-          system, and the one-round system.
-          Not really fun to make but was useful to learn about how C++ works and how to implement algorithms in it.
-        </p>
-      </ProjectComponent>
+
+    </article>
   </main>
 </template>

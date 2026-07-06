@@ -1,6 +1,6 @@
 <template>
     <section
-        class="p-4 text-white flex justify-center gap-4 flex-col bg-gradient-to-r from-violet-400 to-purple-400 rounded-sm select-none outline outline-offset-2 outline-2 outline-purple-500">
+        class="solid-shadow-3 p-4 text-white flex justify-center gap-4 flex-col bg-gradient-to-r from-violet-400 to-purple-400 rounded-sm select-none border border-2 border-black">
 
         <div class="profile-infos flex items-center gap-4">
             <img src="/assets/img/avatar.png" alt="Avatar" class=" h-24 rounded-full border border-gray-300" />

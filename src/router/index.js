@@ -44,9 +44,9 @@ const router = createRouter({
       component: () => import("../views/stuff/JapaneseAlphabetView.vue"),
     },
     {
-      name: "Stuff",
-      path: "/stuff",
-      component: () => import("../views/StuffView.vue"),
+      name: "Misc",
+      path: "/misc",
+      component: () => import("../views/MiscView.vue"),
     }
   ],
 })
