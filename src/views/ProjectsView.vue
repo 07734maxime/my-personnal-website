@@ -4,7 +4,7 @@ import ProjectComponent from '@/components/ProjectComponent.vue';
 </script>
 
 <template>
-  <main class="min-w-full flex flex-col gap-3">
+  <main class="flex flex-col gap-3">
 
     <h1 class="highlight-title rotate-2 text-3xl">Projects</h1>
 
@@ -20,24 +20,19 @@ import ProjectComponent from '@/components/ProjectComponent.vue';
 
         <ProjectComponent t :project="{
           name: 'Initialization to Rust',
+          link: '/blog/rust-impressions',
           tags: [
             { name: 'Rust', color: 'bg-rust' }
           ]
         }">
           <p class="min-h-32 text-sm mx-2">My first project in Rust! I tried to implement linear algebra operations.</p>
-          <div class="flex justify-center">
-            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-              Info</button>
-          </div>
+
         </ProjectComponent>
 
         <ProjectComponent
           :project="{ name: 'This website', tags: [{ name: 'Vue', color: 'bg-green-500' }, { name: 'Tailwind', color: 'bg-sky-400' }] }">
           <p class="min-h-32 text-sm mx-2">This website you are currently in.</p>
-          <div class="flex justify-center">
-            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-              Info</button>
-          </div>
+
 
         </ProjectComponent>
 
@@ -45,18 +40,11 @@ import ProjectComponent from '@/components/ProjectComponent.vue';
           :project="{ name: 'Yepi', tags: [{ name: 'Node.js', color: 'bg-green-500' }, { name: 'Express', color: 'bg-yellow-500' }] }">
 
           <p class="min-h-32 text-sm mx-2">Abandonned app to listen to music. </p>
-          <div class="flex justify-center">
-            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-              Info</button>
-          </div>
         </ProjectComponent>
 
         <ProjectComponent :project="{ name: 'Unnamed', tags: [{ name: 'Electron', color: 'bg-blue-500' }] }">
           <p class="min-h-32 text-sm mx-2">Abandonned app to create a color palette.</p>
-          <div class="flex justify-center">
-            <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-              Info</button>
-          </div>
+
         </ProjectComponent>
 
       </article>
@@ -75,29 +63,17 @@ import ProjectComponent from '@/components/ProjectComponent.vue';
         :project="{ name: 'S101', tags: [{ name: 'C++', color: 'bg-blue-600' }, { name: 'Doxygen', color: 'bg-neutral-500' }] }">
 
         <p class="min-h-32 text-sm mx-2">Creation of a "Pac-Man" type game in the shell.</p>
-        <div class="flex justify-center">
-          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-            Info</button>
-        </div>
       </ProjectComponent>
 
       <ProjectComponent
         :project="{ name: 'R102', tags: [{ name: 'HTML', color: 'bg-red-500' }, { name: 'CSS', color: 'bg-blue-400' }] }">
 
         <p class="min-h-32 text-sm mx-2">A website to showcase albums and songs from a music band.</p>
-        <div class="flex justify-center">
-          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-            Info</button>
-        </div>
       </ProjectComponent>
 
       <ProjectComponent :project="{ name: 'S102', tags: [{ name: 'C++', color: 'bg-blue-600' }] }">
         <p class="min-h-32 text-sm mx-2">Implementing voting systems: Borda count, two-round system, and one-round
           system.</p>
-        <div class="flex justify-center">
-          <button class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
-            Info</button>
-        </div>
       </ProjectComponent>
 
     </article>

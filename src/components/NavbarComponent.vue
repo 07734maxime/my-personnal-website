@@ -16,7 +16,6 @@
 
 
 <script setup>
-import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -29,8 +28,5 @@ const navLinks = router.getRoutes().filter(r => {
   path: r.path
 }));
 
-onMounted(() => {
-  console.log(navLinks);
-})
 
 </script>

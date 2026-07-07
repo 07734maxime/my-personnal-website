@@ -1,9 +1,7 @@
 <template>
   <main class="flex gap-8 flex-col">
 
-    <section>
       <h1 class="highlight-title -rotate-3 text-3xl">Welcome!</h1>
-    </section>
 
     <ProfileCard />
 

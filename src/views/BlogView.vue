@@ -7,26 +7,40 @@ const blogRoutes = ref(router.getRoutes().filter(route => route.path.startsWith(
 </script>
 
 <template>
-  <main class="blog-view">
-    <section>
-      <h1>My personal blog</h1>
-      <p>Basically, this is same as hobby page but with more developed content, more explanations and more depth. I may
-        eventually expand it to include things that
-        are not present on other pages. Do you think it's worth to make an API for this blog? I don't really know, it's
-        manually updated for now, and I don't want it
-        to be overkill.
-      </p>
-    </section>
+  <main class="flex flex-col gap-12">
+    <h1 class="highlight-title rotate-2 text-3xl">My personal blog</h1>
 
-    <section>
-      <h2>Navigation</h2>
+    <section class="flex flex-col gap-3">
+      <h2 class="text-xl highlight-title -rotate-1">Navigation</h2>
       <ul class="flex flex-col gap-2 list-none p-0">
-        <RouterLink v-for="route in blogRoutes" :key="route.path" :to="route.path">
-          <li class="bg-neutral-200 p-3 hover:border-red-500 border hover:bg-gray-300">
-            {{ route.name }}
+
+        <li v-for="route in blogRoutes" :key="route.path" :to="route.path"
+          class="bg-purple-300 p-2 border border-2 rounded-tr rounded-bl flex flex-col gap-3 solid-shadow-3">
+          <ul class="flex gap-2">
+            <li v-for="tag in route.meta.tags" :key="tag" :class="tag.color"
+              class="select-none cursor-pointer text-white bg-gray-200 text-gray-800 text-xs px-2 py-1 uppercase font-mono font-bold">
+              {{ tag.label }}
+            </li>
+
+          </ul>
+          <div>
+            <span class="font-bold font-mono">{{ route.name }}</span>
+            <p class="text-gray-700 text-sm">{{ route.meta.description }}</p>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500">{{ route.meta.date }}</span>
+            <RouterLink :to="route.path"
+              class="bg-black p-2 text-white hover:bg-gray-700 w-fit ml-auto font-mono text-sm">Read <i
+                class="fas fa-arrow-right"></i></RouterLink>
+          </div>
+        </li>
+
+          <li class="select-none text-gray-500 border border-dashed border-2 rounded-tr rounded-bl flex items-center justify-center gap-2 h-32">
+             <span class="font-bold font-mono text-lg">More soon!</span>
           </li>
-        </RouterLink>
+
       </ul>
     </section>
+
   </main>
 </template>

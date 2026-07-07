@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <section class="solid-shadow-5 text-justify font-mono border border-2 bg-purple-300  transition-colors duration-50 cursor-pointer" >
+    <section class="solid-shadow-5 text-justify font-mono border border-2 bg-purple-300 transition-all duration-150 cursor-pointer hover:scale-99" >
       <div class="flex bg-purple-400 p-1 border-b border-b-2 justify-between">
         <div class="flex gap-1">
           <hr class="h-2 w-2 bg-red-500 border-none" />
@@ -29,6 +29,10 @@ defineProps({
               </li>
             </ul>
             <slot></slot>
+          </div>
+          <div v-if="project.link" class="my-3 flex justify-center">
+            <RouterLink :to="project.link" class="bg-black transition-all duration-50 hover:bg-neutral-800 text-white p-1 font-bold">More
+              Info</RouterLink :to="project.link">
           </div>
     </section>
 </template>

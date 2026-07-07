@@ -85,8 +85,8 @@
         </ul>
         <p>These operations are the building blocks for the Gaussian elimination algorithm, which I will implement soon.
         </p>
-        <article class="bg-neutral-200 p-3 border-red-500 border">
-            <h3 class="m-0">To Do</h3>
+
+        <AboutBox title="TODO.txt">
             <ul>
                 <li>Implement the Gaussian elimination algorithm</li>
                 <li>Implement determinant calculation
@@ -106,7 +106,7 @@
                 <li>I'll see for more features if I have time and motivation</li>
                 <li>Optimize the code for better performance</li>
             </ul>
-        </article>
+        </AboutBox>
         <article>
             <h3>What do I think?</h3>
             <p>Honestly, Rust is very frustrating when you always used high-level languages. However, I feel like I can
@@ -123,5 +123,6 @@
 import Latex from '@/components/Latex.vue';
 import CodeBlock from '@/components/CodeBlock.vue';
 import { useRoute } from 'vue-router';
+import AboutBox from '@/components/boxes/AboutBox.vue';
 const route = useRoute();
 </script>
