@@ -82,7 +82,7 @@ const albumList = [
 
       <AboutBox>
         <p class="text-sm text-gray-700">
-          You can find my anime list <a class="underline" href="https://myanimelist.net/animelist/maxime07734"
+          You can find my anime list <a class="bg-orange-200 hover:underline" href="https://myanimelist.net/animelist/maxime07734"
             target="_blank" rel="noopener noreferrer">here</a> (even though it's outdated)
         </p>
       </AboutBox>
@@ -98,7 +98,7 @@ const albumList = [
 
       <h2 class="highlight-title -rotate-1">Video Games</h2>
 
-      <HobbyBox reversed :title="'Video Games'"
+      <HobbyBox reversed :title="'Video Games Shelf'"
         :favorite="{ img: '/assets/img/games/yume_nikki.jpg', alt: 'Yume Nikki', note: 'This is definitely the best walking simulator ever made.' }"
         :list="[
           { img: '/assets/img/games/saya_no_uta.jpg', alt: 'Saya no Uta' },

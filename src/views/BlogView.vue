@@ -53,7 +53,8 @@ const route = useRoute();
         </li>
 
           <li class="select-none text-gray-500 border border-dashed border-2 rounded-tr rounded-bl flex items-center justify-center gap-2 h-32">
-             <span class="font-bold font-mono text-lg">More soon!</span>
+             <span v-if="filteredRoutes.length" class="font-bold font-mono text-lg">More soon!</span>
+             <span v-else class="font-bold font-mono text-lg">No results found</span>
           </li>
 
       </ul>
