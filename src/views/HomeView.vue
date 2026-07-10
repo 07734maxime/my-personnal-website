@@ -3,7 +3,7 @@
 
       <h1 class="highlight-title -rotate-3 text-3xl">Welcome!</h1>
 
-    <ProfileCard />
+      <ProfileCard />
 
     <section class="flex flex-col gap-4">
       <h2 class="highlight-title rotate-2 text-2xl mx-auto">About Me</h2>
@@ -65,7 +65,7 @@
 
 <script setup>
 import DefaultBox from '@/components/boxes/DefaultBox.vue';
-import ProfileCard from '@/components/ProfilCard.vue';
+import ProfileCard from '@/components/ProfileCard.vue';
 
 const techList = [{
   icon: "fab fa-vuejs",
